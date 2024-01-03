@@ -53,30 +53,6 @@ vrrp_instance VI_1 {
 
 sudo apt-get install nginx
 
-4.Создал Bash-скрипт для проверки доступности порта и наличия файла index.html.
-
-#!/bin/bash
-
-nc -z -w3 localhost 80
-PORT_STATUS=$?
-
-if [ $PORT_STATUS -eq 0 ]; then
-    curl -s localhost | grep -q "index.html"
-    FILE_STATUS=$?
-
-    if [ $FILE_STATUS -eq 0 ]; then
-        exit 0
-    else
-        exit 1
-    fi
-else
-    exit 1
-fi
-
-Сделал скрипт исполняемым:
-
-    chmod +x /path/to/your/script.sh
-
 ![Задание 2](2-1.png)
 ![Задание 2](2-2.png)
 ![Задание 2](2-3.png)
