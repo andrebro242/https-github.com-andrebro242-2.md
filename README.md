@@ -53,7 +53,7 @@ vrrp_instance VI_1 {
 
 sudo apt-get install nginx
 
-4.Создал Bash-скрипт для проверки доступности порта и наличия файла index.html. Например, /path/to/your/script.sh:
+4.Создал Bash-скрипт для проверки доступности порта и наличия файла index.html.
 
 #!/bin/bash
 
